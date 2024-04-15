@@ -1,0 +1,41 @@
+// A------B
+// | \  / |
+// |      |
+// |/    \|
+// D------C
+{
+  "Figure" :
+  {
+    "Description" : "A square that contains four triangles within it.",
+    "Points" :
+	  [
+	    {
+	      "name" : "A",
+		  "x" : 0,
+   	      "y" : 0
+		},
+	    {
+	      "name" : "B",
+		  "x" : 5,
+   	      "y" : 0
+		},
+	    {
+	      "name" : "C",
+		  "x" : 5,
+   	      "y" : -5
+		},
+		{
+		  "name" : "D",
+		  "x" : 0,
+   	      "y" : -5
+		}
+	  ],
+  
+    "Segments" :
+      [
+	    {"A" : ["B", "D", "C"] },
+	    {"B" : ["C", "D"]},
+	    {"C" : ["D"]}
+      ]
+  }
+}

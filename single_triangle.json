@@ -1,0 +1,31 @@
+
+{
+  "Figure" :
+  {
+    "Description" : "Right Triangle in the first quadrant.",
+    "Points" :
+	  [
+	    {
+	      "name" : "A",
+		  "x" : 0,
+   	      "y" : 0
+		},
+	    {
+	      "name" : "B",
+		  "x" : 1,
+   	      "y" : 1
+		},
+	    {
+	      "name" : "C",
+		  "x" : 1,
+   	      "y" : 0
+		}
+	  ],
+  
+    "Segments" :
+      [
+	    {"A" : ["B", "C"] },
+	    {"B" : ["C"]}
+      ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+	"Figure": {
+		"Description": "Equilateral Triangle",
+		"Points": [
+			{
+				"name": "A",
+				"x": 0, 
+				"y": 0
+			},
+			{
+				"name": "B",
+				"x": 2,
+				"y": 0
+			},
+			{
+				"name": "C",
+				"x": 1,
+				"y": 1.732
+			}
+		],
+	"Segments": [
+		{"A": ["B", "C", "A"]}
+		]
+	}
+}
+
