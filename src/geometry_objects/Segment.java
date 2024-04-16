@@ -172,4 +172,38 @@ public class Segment extends GeometricObject
 		}
 		return orderedPoints;
 	}
+	
+	//
+    // This functionality may be helpful to add to your Segment class.
+    //
+	
+    /*
+     * @param thisRay -- a ray
+     * @param thatRay -- a ray
+     * @return Does thatRay overlay thisRay? As in, both share same origin point, but other two points
+     * are not common: one extends over the other.
+     */
+    public static boolean overlaysAsRay(Segment left, Segment right)
+    {
+    	// Equal segments overlay
+    	if (left.equals(right)) return true;
+
+    	// Get point where they share an endpoint
+    	Point shared = left.sharedVertex(right);
+    	if (shared == null) return false;
+
+    	// Collinearity is required
+    	if (!left.isCollinearWith(right)) return false;
+    	
+    	Point otherL = left.other(shared);
+    	Point otherR = right.other(shared);
+    	
+        // Rays pointing in the same direction?
+        // Avoid: <--------------------- . ---------------->
+        //      V------------W------------Z
+                                     // middle  endpoint  endpoint
+        return GeometryUtilities.between(otherL, shared, otherR) ||
+        	   GeometryUtilities.between(otherR, shared, otherL);
+    }
+
 }
