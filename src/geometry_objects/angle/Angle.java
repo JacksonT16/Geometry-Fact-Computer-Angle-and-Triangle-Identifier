@@ -169,10 +169,20 @@ public class Angle implements Comparable<Angle>
 				            _ray2Endpoint.getName() +
 				            " = " + String.format("%1$.3f", _measure) + ")";
 	}
-
+	
+	/**
+	 * @param obj: angle to be compared 
+	 * @return true if this equals obj; False otherwise
+	 */
 	@Override
 	public boolean equals(Object obj)
 	{
-		// TODO
+		if(!(obj instanceof Angle)) return false;
+		
+		if(this == obj) return true;
+		
+		Angle other = (Angle) obj;
+		
+		return overlays(other);
 	}
 }
